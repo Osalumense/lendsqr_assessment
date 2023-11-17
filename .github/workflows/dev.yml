@@ -22,7 +22,7 @@ jobs:
          sudo mv render_linux /usr/local/bin/render
       - name: Create env for App
         run: |
-          cat > .env <<EOF
+          cat > .env << EOF
           NODE_ENV=production
           DEBUG=*
           SECRET_KEY=${{ secrets.SECRET_KEY }}
@@ -46,4 +46,4 @@ jobs:
       - name: Run seed
         run: yarn seed
       - name: Deploy to Render
-        run: render deploy --token ${{ secrets.RENDER_TOKEN }} --config render.yaml
+        run: render deploy --token ${{ secrets.RENDER_TOKEN }}
