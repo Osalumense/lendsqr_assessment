@@ -2409,10 +2409,30 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-knex@*, knex@^3.0.1:
+knex@*:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/knex/-/knex-3.0.1.tgz#b12f3173c30d8c7b6d69dc257cc9c84db00ad60e"
   integrity sha512-ruASxC6xPyDklRdrcDy6a9iqK+R9cGK214aiQa+D9gX2ZnHZKv6o6JC9ZfgxILxVAul4bZ13c3tgOAHSuQ7/9g==
+  dependencies:
+    colorette "2.0.19"
+    commander "^10.0.0"
+    debug "4.3.4"
+    escalade "^3.1.1"
+    esm "^3.2.25"
+    get-package-type "^0.1.0"
+    getopts "2.3.0"
+    interpret "^2.2.0"
+    lodash "^4.17.21"
+    pg-connection-string "2.6.1"
+    rechoir "^0.8.0"
+    resolve-from "^5.0.0"
+    tarn "^3.0.2"
+    tildify "2.0.0"
+
+knex@^2.5.0:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/knex/-/knex-2.5.1.tgz#a6c6b449866cf4229f070c17411f23871ba52ef9"
+  integrity sha512-z78DgGKUr4SE/6cm7ku+jHvFT0X97aERh/f0MUKAKgFnwCYBEW4TFBqtHWFYiJFid7fMrtpZ/gxJthvz5mEByA==
   dependencies:
     colorette "2.0.19"
     commander "^10.0.0"
@@ -2517,6 +2537,13 @@ loupe@^2.3.6:
   integrity sha512-zSMINGVYkdpYSOBmLi0D1Uo7JU9nVdQKrHxC8eYlV+9YKK9WePqAlL7lSlorG/U2Fw1w0hTBmaa/jrQ3UbPHtA==
   dependencies:
     get-func-name "^2.0.1"
+
+lru-cache@^10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.0.2.tgz#34504678cc3266b09b8dfd6fab4e1515258271b7"
+  integrity sha512-Yj9mA8fPiVgOUpByoTZO5pNrcl5Yk37FcSHsUINpAsaBIEZIuqcCclDZJCVxqQShDsmYX8QG63svJiTbOATZwg==
+  dependencies:
+    semver "^7.3.5"
 
 lru-cache@^5.1.1:
   version "5.1.1"
@@ -3050,7 +3077,7 @@ semver@^6.3.0, semver@^6.3.1:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-semver@^7.3.8, semver@^7.5.3, semver@^7.5.4:
+semver@^7.3.5, semver@^7.3.8, semver@^7.5.3, semver@^7.5.4:
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.4.tgz#483986ec4ed38e1c6c48c34894a9182dbff68a6e"
   integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
