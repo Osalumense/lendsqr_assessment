@@ -9,7 +9,9 @@
     "start": "ts-node-dev --respawn --transpile-only --exit-child src/index.ts",
     "clean": "rm -rf ./dist",
     "build": "yarn && tsc --build tsconfig.json",
-    "test-dev": "cross-env NODE_ENV=test ts-node-dev --respawn --transpile-only ./node_modules/mocha/bin/_mocha './src/tests/*.test.ts' --timeout 10000"
+    "test-dev": "cross-env NODE_ENV=test ts-node-dev --respawn --transpile-only ./node_modules/mocha/bin/_mocha './src/tests/*.test.ts' --timeout 10000",
+    "migrate": "npx knex migrate:latest",
+    "seed": "npx knex seed:run"
   },
   "private": false,
   "dependencies": {
@@ -19,7 +21,6 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "express-rate-limit": "^7.1.4",
     "helmet": "^7.1.0",
     "isomorphic-fetch": "^3.0.0",
     "jsonwebtoken": "^9.0.2",

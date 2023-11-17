@@ -1,0 +1,27 @@
+name: Lendsqr assessment Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  deploy-main:
+    name: Deploy lendsqr assessment to main
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+     
+      - name: Install dependencies on app
+        run: yarn install --only=prod
+      - name: Build ts files
+        run: yarn run build
+      - name: Run migration
+        run: yarn migrate
+      - name: Run seed
+        run: yarn seed
+      - name: Deploy to Render
+        run: render deploy --token ${{ secrets.RENDER_TOKEN }} --config render.yaml
