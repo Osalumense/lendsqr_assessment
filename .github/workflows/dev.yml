@@ -16,7 +16,10 @@ jobs:
         with:
           node-version: "16"
       - name: Install Render CLI
-        run: yarn global add @render/cli
+        run: |
+         curl -O https://render.com/download/render_linux
+         chmod +x render_linux
+         sudo mv render_linux /usr/local/bin/render
       - name: Create env for App
         run: |
           cat > .env <<EOF
