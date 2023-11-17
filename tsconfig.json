@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+      "strictNullChecks": true,
+  
+      "sourceMap": true,
+      "allowJs": true,
+  
+      "target": "es5",
+
+      "outDir": "./dist",
+      "module": "CommonJS",      
+  
+      "moduleResolution": "node",
+      "lib": ["es6", "dom"],
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+  
+      "rootDir": "./",
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true
+    },
+
+    "include": [
+      "src", 
+      "package.json", 
+      "package-lock.json", 
+      "knexfile.js"
+    ],
+  
+    "exclude": [
+      "node_modules", 
+      "*/*/*.test.ts", 
+      "*/*/test.ts", 
+      ".build"
+    ]
+  }
+  
