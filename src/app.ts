@@ -11,7 +11,6 @@ const API_PREFIX = config.API_PREFIX;
 const app = express();
 
 app.use(express.json());
-app.use(helmet())
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
