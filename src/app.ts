@@ -4,7 +4,6 @@ import cors from "cors"
 import routes from "./routes"
 import bodyParser from "body-parser"
 import { AppConfig } from "./config/config"
-import helmet from "helmet"
 
 const config = AppConfig.config
 
