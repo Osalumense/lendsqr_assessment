@@ -8,7 +8,7 @@ exports.up = function(knex) {
     return knex.schema
         .createTable("users", (table) => {
             table.increments('id').primary();
-            table.uuid('uuid').defaultTo(knex.raw('uuid()')).unique();
+            table.string('uuid').defaultTo(knex.raw('uuid()')).unique();
             table.string("firstName").notNullable();
             table.string("lastName").notNullable();
             table.string("phone");
